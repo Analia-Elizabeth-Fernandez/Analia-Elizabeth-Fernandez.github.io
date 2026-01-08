@@ -8,7 +8,7 @@ Estoy interesada en proyectos freelance y oportunidades de colaboración.
 
 ## 🌐 Mi portfolio online
 
-[Visitar portfolio](https://analia-elizabeth-fernandez.github.io/)
+[Visitar portfolio](https://portfolio-analia-fernandez.netlify.app/)
 
 ---------------------------------------------------------------------------
 

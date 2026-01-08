@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analía Elizabeth Fernández | Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+  <header class="diagonal-header">
+    <div class="profile-wrapper">
+      <div class="profile-glow"></div>
+      <img src="foto-perfil.png" alt="Analía Elizabeth Fernández" class="foto-perfil">
+    </div>
+
+    <h1>Analía Elizabeth Fernández</h1>
+    <h2><span id="typed-text"></span><span class="cursor">|</span></h2>
+
+
+    <h3>Front-End · React · HTML · CSS · JavaScript · Python · Back-End</h3>
+
+    <p>
+      Soy desarrolladora web en constante perfeccionamiento, enfocada en crear
+      experiencias digitales funcionales, modernas y visualmente atractivas.
+    </p>
+  </header>
+<script>
+const phrases = [
+  "Desarrolladora Web",
+  "Futura Desarrolladora de Software"
+];
+
+const typedText = document.getElementById("typed-text");
+let currentPhrase = 0;
+let currentChar = 0;
+let isDeleting = false;
+
+function type() {
+  const phrase = phrases[currentPhrase];
+
+  if (isDeleting) {
+    typedText.textContent = phrase.substring(0, currentChar - 1);
+    currentChar--;
+  } else {
+    typedText.textContent = phrase.substring(0, currentChar + 1);
+    currentChar++;
+  }
+
+  let speed = isDeleting ? 100 : 150; 
+  if (!isDeleting && currentChar === phrase.length) {
+    isDeleting = true;
+    speed = 2000; 
+  } else if (isDeleting && currentChar === 0) {
+    isDeleting = false;
+    currentPhrase = (currentPhrase + 1) % phrases.length;
+    speed = 500; 
+  }
+
+  setTimeout(type, speed);
+}
+
+type();
+</script>
+
+  <section class="container">
+    <h2 class="section-title">Proyectos destacados</h2>
+
+    <div class="project">
+      <h3>🛒 <a href="https://obeliscotours.netlify.app/" target="_blank">E-commerce Turismo</a></h3>
+      <p>Diseño responsive con HTML, CSS y JavaScript.</p>
+    </div>
+
+    <div class="project">
+      <h3>🎓 <a href="https://clases-particulares.netlify.app/" target="_blank">Profesora Particular Online</a></h3>
+      <p>Página one-page responsive.</p>
+    </div>
+  </section>
+
+  <section class="diagonal-section">
+  <div class="diagonal-content">
+    <h2 class="section-title">Certificaciones</h2>
+
+    <div class="certificate">
+      <h3>📜 Desarrollo Web Front-End</h3>
+      <img src="frontend.jpg" alt="Certificado Front-End">
+    </div>
+
+    <div class="certificate">
+      <h3>📜 React JS</h3>
+      <img src="react.jpg" alt="Certificado React">
+    </div>
+
+    <div class="certificate">
+      <h3>📜 Back-End Java</h3>
+      <img src="java.jpg" alt="Certificado Java">
+    </div>
+  </div>
+</section>
+
+  <section class="container">
+    <h2 class="section-title">Contacto</h2>
+    <p class="contact">
+      <a href="https://github.com/Analia-Elizabeth-Fernandez" target="_blank">💻 GitHub</a>
+      <a href="https://www.workana.com/freelancer/9e0db81b206572e80d3b4496cb5952bf" target="_blank">💼 Workana</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Analía Elizabeth Fernández · Portfolio profesional
+  </footer>
+
+</body>
+</html>
+

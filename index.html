@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analía Elizabeth Fernández | Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+  <header class="diagonal-header">
+    <div class="profile-wrapper">
+      <div class="profile-glow"></div>
+      <img src="foto-perfil.png" alt="Analía Elizabeth Fernández" class="foto-perfil">
+    </div>
+
+    <h1>Analía Elizabeth Fernández</h1>
+    <h2><span id="typed-text"></span><span class="cursor">|</span></h2>
+
+
+    <h3>Front-End · React · HTML · CSS · JavaScript · Python · Back-End</h3>
+
+<section class="container about">
+  <p>
+    Soy desarrolladora web Full Stack Junior y actualmente estudio Desarrollo de
+    Software, ampliando mis habilidades y profundizando en proyectos reales.
+    <br><br>
+    Me apasiona crear experiencias digitales funcionales, modernas y visualmente 
+    atractivas, aplicando mis conocimientos en cada proyecto que comparto en mi 
+    portfolio y GitHub.
+  </p>
+</section>
+
+  </header>
+<script>
+const phrases = [
+  "Desarrolladora Web",
+  "Front-End con base Full Stack"
+];
+
+
+const typedText = document.getElementById("typed-text");
+let currentPhrase = 0;
+let currentChar = 0;
+let isDeleting = false;
+
+function type() {
+  const phrase = phrases[currentPhrase];
+
+  if (isDeleting) {
+    typedText.textContent = phrase.substring(0, currentChar - 1);
+    currentChar--;
+  } else {
+    typedText.textContent = phrase.substring(0, currentChar + 1);
+    currentChar++;
+  }
+
+  let speed = isDeleting ? 100 : 150; 
+  if (!isDeleting && currentChar === phrase.length) {
+    isDeleting = true;
+    speed = 2000; 
+  } else if (isDeleting && currentChar === 0) {
+    isDeleting = false;
+    currentPhrase = (currentPhrase + 1) % phrases.length;
+    speed = 500; 
+  }
+
+  setTimeout(type, speed);
+}
+
+type();
+</script>
+
+  <section class="container">
+    <h2 class="section-title">Proyectos destacados</h2>
+
+<div class="project">
+  <h3>🛒 E-commerce Turismo</h3>
+
+  <p>
+    Sitio web de turismo desarrollado con HTML, CSS y JavaScript.
+    Diseño responsive y estructura preparada para e-commerce.
+  </p>
+
+  <ul class="case-study">
+    <li><strong>Problema resuelto:</strong> Facilitar la reserva de tours de forma rápida y clara para los turistas de todas partes del mundo.</li>
+    <li><strong>Tecnologías:</strong> HTML, CSS, JavaScript, React JS, Netlify</li>
+    <li><strong>Rol:</strong> Desarrollo completo del front-end, diseño responsive y UX.</li>
+  </ul>
+
+  <div class="project-links">
+    <a href="https://obeliscotours.netlify.app/" target="_blank" class="btn demo">
+      🔗 Ver demo
+    </a>
+
+    <a href="https://github.com/Analia-Elizabeth-Fernandez/Obelisco-Tours---React-JS"
+        target="_blank"
+        class="btn code">
+      💻 Ver código
+    </a>
+  </div>
+</div>
+
+<div class="project">
+  <h3>🎓 Profesora Particular Online</h3>
+
+  <p>
+    Página web one-page desarrollada desde cero.
+    Enfoque en diseño responsive y experiencia de usuario.
+  </p>
+
+    <ul class="case-study">
+    <li><strong>Problema resuelto:</strong> Presentar servicios de manera clara y profesional en un solo scroll.</li>
+    <li><strong>Tecnologías:</strong> HTML, CSS, JavaScript, Netlify</li>
+    <li><strong>Rol:</strong> Diseño y desarrollo completo de la landing page, UX y responsive.</li>
+  </ul>
+
+
+  <div class="project-links">
+    <a href="https://clases-particulares.netlify.app/" target="_blank" class="btn demo">
+      🔗 Ver demo
+    </a>
+
+    <a href="https://github.com/Analia-Elizabeth-Fernandez/Clases-Particulares"
+        target="_blank"
+        class="btn code">
+      💻 Ver código
+    </a>
+  </div>
+</div>
+
+
+  <section class="container">
+    <h2 class="section-title">Certificaciones</h2>
+
+    <div class="certificates-wrapper">
+
+      <a href="https://openbadgefactory.com/c/receive?k=SQ8PYWa50GWaFMA&e=anfer510%40gmail.com&t=2498fa93fb1d847f593a34a86089b39ec084cf23&v=2.0" target="_blank">
+      <img src="frontend-badge.png" alt="Insignia Front-End"></a>
+
+      <a href="https://openbadgefactory.com/c/receive?k=T1K5B5a1RP6IaPMT&e=anfer510%40gmail.com&t=37f3d7f4bb1e8ba4093da2da88e0daa8c8534427&v=2.0" target="_blank">
+      <img src="react-badge.png" alt="Insignia React"></a>
+
+
+
+      <a href="https://openbadgefactory.com/c/receive?k=T9601XaCIUVa10M&e=anfer510%40gmail.com&t=25d5c1783e416ad0a547f59c527fed80e0164271&v=2.0" target="_blank">
+      <img src="java-badge.png" alt="Insignia Java"></a>
+</section>
+  </div>
+  </div>
+
+<br>
+
+</section>
+
+<footer class="diagonal-footer">
+  <div class="footer-icons">
+    <a href="https://github.com/Analia-Elizabeth-Fernandez" target="_blank">
+      <img src="github.png" alt="Github">
+    </a>
+    <a href="https://www.workana.com/freelancer/9e0db81b206572e80d3b4496cb5952bf">
+      <img src="https://cf.wkncdn.com/static/assets/build/img/logos/mobile_logo.e47e90d22.svg" alt="Workana">
+    </a>
+  </div>
+
+  <p class="footer-text">
+    © 2026 Analía Elizabeth Fernández · Portfolio profesional
+  </p>
+</footer>
+
+</section>
+</html>
+
